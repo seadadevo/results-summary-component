@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+body {
+  font-family: "Hanken Grotesk", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  position: relative;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(2 ,minmax(350px , 1fr) );
+  min-height: 450px;
+  border-radius: 10px;
+  width: 700px;
+  max-width: 100%;
+  
+  position: relative;
+}
+.card{ 
+  width: 100%;
+  height: 100%;
+}
+.result{ 
+  background-color:hsl(252, 100%, 67%) ;
+  border-radius: 20px;
+  background-image: linear-gradient(180deg,  hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+}
+.card{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+}
+.result > p:first-of-type{ 
+  color: hsl(241, 100%, 89%);
+  font-size: 18px;
+  font-weight: 600;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.result .circle{
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image: linear-gradient(100deg, hsla(256, 72%, 46%, 1),
+  hsla(241, 72%, 46%, 0) ) ;
+}
+.result .circle h1{
+  color: hsl(0, 0%, 100%);
+  font-size: 50px;
+  margin-bottom: -24px;
+}
+.result .circle p{
+  color: hsl(246, 100%, 75%);
+  font-weight: 600;
+}
+.result h2{ 
+  margin-top: 20px;
+  color: hsl(0, 0%, 100%);
+  font-size: 35px;
+  font-weight: 500;
+}
+.result p:last-of-type{
+  color: hsl(241, 100%, 89%);
+  max-width: 204px;
+  font-size: 15px;
+  font-weight: 600;
+  margin: 20px;
+  text-align: center;
+}
+
+.summary { 
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 0 20px 20px 0;
+  box-shadow: 2px 0 10px hsl(241, 100%, 89%);
+}
+.summary h2{ 
+  color: hsl(227, 21%, 27%);
+  align-self: flex-start;
+  font-size: 20px;
+  font-weight: 700;
+  margin: 25px;
+}
+
+.summary .icons {
+  width: 90%;
+}
+.summary .icons .box {
+  background-color: red;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 90%;
+}
+.summary .icons .box p:first-of-type {
+  display: flex;
+  gap: 10px;
+  font-weight: 700;
+}
+.summary .icons .box p:last-of-type {
+  color: #9799a7;
+  font-weight: 600;
+}
+.summary .icons .box p:last-child span {
+  color: #3b3f55;
+  font-weight: 600;
+}
+
+button{ 
+  color: hsl(0, 0%, 100%);
+  background-color: hsl(224, 30%, 27%);
+  padding: 15px 79px;
+  border-radius: 30px;
+  font-size: 16px;
+  font-weight: 600;
+}
+.attribution {
+  position: fixed;
+  bottom: 0;
+  background-color: hsl(0, 0%, 100%);
+}
+
+@media (max-width: 768px) {
+  .container{ 
+    grid-template-columns: 1fr;
+  }
+}
+
